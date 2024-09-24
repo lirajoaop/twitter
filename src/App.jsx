@@ -1,14 +1,17 @@
 import { Sidebar } from "./components/Sidebar";
 import { Tweet } from "./components/Tweet";
 import { TwitterForm } from "./components/TwitterForm";
-import { randomUUID } from "node:crypto";
+// import { randomUUID } from "node:crypto";
 
 function App() {
-  const addNewTweet = (content, includeImage = false) => {
-    const newTweet = {
-      id: randomUUID,
-    };
-  };
+  // const addNewTweet = (content, includeImage = false) => {
+  //   const newTweet = {
+  //     id: randomUUID,
+  //     name: 'User',
+  //     username: `user${Math.floor(Math.random() * 1000)}`,
+  //     avatar:
+  //   };
+  // };
 
   return (
     <>
