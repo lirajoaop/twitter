@@ -1,17 +1,32 @@
+import { useState } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { Tweet } from "./components/Tweet";
 import { TwitterForm } from "./components/TwitterForm";
-// import { randomUUID } from "node:crypto";
+import { getAvatar, getRandomImage } from "./utils/generateImages";
+import { v4 } from "uuid";
 
 function App() {
-  // const addNewTweet = (content, includeImage = false) => {
-  //   const newTweet = {
-  //     id: randomUUID,
-  //     name: 'User',
-  //     username: `user${Math.floor(Math.random() * 1000)}`,
-  //     avatar:
-  //   };
-  // };
+  const [tweets, setTweets] = useState([]);
+
+  const addNewTweet = (content, includeImage = false) => {
+    const newTweet = {
+      id: v4,
+      name: "User",
+      username: `user${Math.floor(Math.random() * 1000)}`,
+      avatar: getAvatar(`user${Math.floor(Math.random() * 1000)}@email.com`),
+      content,
+      time: new Date().toLocaleString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+      image: includeImage ? getRandomImage() : null,
+      likes: 0,
+      retweets: 0,
+      comments: 0,
+    };
+
+    setTweets((prevTweets) => [newTweet, ...prevTweets]);
+  };
 
   return (
     <>
