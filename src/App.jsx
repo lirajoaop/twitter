@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { Tweet } from "./components/Tweet";
 import { TwitterForm } from "./components/TwitterForm";
@@ -7,6 +7,10 @@ import { v4 } from "uuid";
 
 function App() {
   const [tweets, setTweets] = useState([]);
+
+  useEffect(() => {
+    console.log(tweets);
+  }, [tweets]);
 
   const addNewTweet = (content, includeImage = false) => {
     const newTweet = {
@@ -36,9 +40,13 @@ function App() {
           <header className="sticky top-0 z-10 bg-twitter-background bg-opacity-80 backdrop-blur-sm">
             <h2 className="px-4 py-3 text-xl font-bold">For You</h2>
           </header>
-          <TwitterForm />
+          <TwitterForm
+            onTweet={(content) => addNewTweet(content, Math.random() > 0.6)}
+          />
           <div>
-            <Tweet />
+            {tweets.map((tweet) => (
+              <Tweet key={tweet.id} tweet={tweet} />
+            ))}
           </div>
         </main>
       </div>
