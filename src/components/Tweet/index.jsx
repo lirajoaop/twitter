@@ -57,33 +57,32 @@ export function Tweet({ tweet }) {
               alt="user image content"
             />
           )}
-          <div className="flex justify-between mt-4 text-gray-500">
+          <div className="flex justify-between mt-4 text-gray-500 ">
             <div className="flex items-center cursor-pointer hover:text-blue-400">
               <FontAwesomeIcon
                 icon={faComment}
                 onClick={() => handleAction("comment")}
               />
-              <span>{comments}</span>
+              <span className="ml-2">{comments}</span>
             </div>
             <div className="flex items-center cursor-pointer hover:text-green-400">
               <FontAwesomeIcon
                 icon={faRetweet}
                 onClick={() => handleAction("retweet")}
               />
-              <span>{retweet}</span>
+              <span className="ml-2">{retweet}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-red-400">
+            <div className="flex items-center cursor-pointer hover:text-red-400 gap-1">
               <FontAwesomeIcon
                 icon={faHeart}
                 onClick={() => handleAction("like")}
               />
-              <span>{like}</span>
+              <span className="ml-2">{like}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-blue-400">
+            <div className="flex items-center cursor-pointer hover:text-blue-400 gap-1">
               <FontAwesomeIcon icon={faChartBar} />
-              <span>0</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-blue-400">
+            <div className="flex items-center cursor-pointer hover:text-blue-400 gap-1">
               <FontAwesomeIcon icon={faUpload} />
             </div>
           </div>

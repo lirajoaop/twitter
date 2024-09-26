@@ -9,8 +9,43 @@ function App() {
   const [tweets, setTweets] = useState([]);
 
   useEffect(() => {
-    console.log(tweets);
-  }, [tweets]);
+    const interval = setInterval(() => {
+      addNewRandomTweets();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const addNewRandomTweets = () => {
+    const randomTweets = [
+      "Excited to share my latest project with you all! Stay tuned for updates. 💻✨ #coding #developer",
+      "Just tried this amazing new recipe, and it was a total game-changer! 🍲🔥 #foodie #homemade",
+      "Can’t believe how fast this year is flying by. Time to start planning for 2025! ⏳#goals #productivity",
+      "Found this beautiful spot while hiking today. Nature never ceases to amaze me. 🌲🌄 #wanderlust #naturelover",
+      "What’s everyone watching this weekend? Looking for new movie recommendations! 🎥🍿 #movienight #suggestions",
+      "Trying to stay productive but the weather outside is just too nice. ☀️🌻 #workfromhome #distractions",
+      "Reminder: Drink more water today! Your body will thank you later. 💧#hydration #healthyliving",
+      "Currently reading this amazing book on self-improvement. 📚 Any other recommendations? #booklover #reading",
+      "Finally got around to cleaning my workspace. Feeling so much more organized now! 🧹🖥️ #productivity #workspace",
+      "Listening to this new album on repeat! So good! 🎧🎶 #musiclover #newrelease",
+      "When you wake up and realize it's Friday! 🎉 #TGIF #weekendvibes",
+      "Had the best coffee today, totally made my morning! ☕😊 #coffeeaddict #morningrituals",
+      "Sometimes you just need to disconnect and recharge. Taking a break from social media for a while. 🌿📵 #mentalhealth #selfcare",
+      "Anyone else addicted to this new series on Netflix? Can’t stop binge-watching! 📺🍿 #Netflix #bingewatching",
+      "Just saw the most stunning sunset! 🌅 #sunsetlover #eveningvibes",
+      "Trying out a new workout routine today. Let’s see how this goes! 💪 #fitnessjourney #goals",
+      "Can’t wait for the holiday season! Already planning my travel itinerary. ✈️🎄 #holidayplanning #wanderlust",
+      "Working on a new blog post. Stay tuned for tips on how to stay productive while working remotely! 📝 #blogging #remotework",
+      "Grateful for the small things in life. 🌸 #gratitude #positivity",
+      "Is it just me, or do Mondays come around way too fast? 😅 #MondayBlues #weekendwarrior",
+    ];
+
+    const randomTweet =
+      randomTweets[Math.floor(Math.random() * randomTweets.length)];
+
+    addNewTweet(randomTweet, Math.random() > 0.7);
+  };
+
+  const randomTweet = () => {};
 
   const addNewTweet = (content, includeImage = false) => {
     const newTweet = {
