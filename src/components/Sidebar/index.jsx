@@ -26,7 +26,7 @@ export function Sidebar() {
     <div className="w-20 xl:w-64 sticky top-0 px-2 h-screen">
       <FontAwesomeIcon
         icon={faTwitter}
-        className="text-blue-400 text-3xl m-4"
+        className="text-twitter-blue text-3xl m-4"
       />
       <nav>
         <NavItem icon={faHome} text="Home" />
@@ -40,12 +40,12 @@ export function Sidebar() {
         <NavItem icon={faEllipsisH} text="More" />
       </nav>
 
-      <button className="bg-blue-400 text-white rounded-full font-bold px-4 py-3 mt-4 w-full cursor-pointer">
+      <button className="bg-twitter-blue text-white rounded-full font-bold px-4 py-3 mt-4 w-full cursor-pointer hover:bg-blue-600 transition duration-200">
         <FontAwesomeIcon
           icon={faFeatherAlt}
-          className="text-white text-3xl m-4 inline xl:hidden "
+          className="text-white  inline xl:hidden "
         />
-        <span className="hidden xl:inline">Twitter</span>
+        <span className="hidden xl:inline hover:bg-twitter-blue">Twitter</span>
       </button>
     </div>
   );

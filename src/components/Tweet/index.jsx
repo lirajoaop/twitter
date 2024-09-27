@@ -58,7 +58,7 @@ export function Tweet({ tweet }) {
             />
           )}
           <div className="flex justify-between mt-4 text-gray-500 ">
-            <div className="flex items-center cursor-pointer hover:text-blue-400">
+            <div className="flex items-center cursor-pointer hover:text-twitter-blue">
               <FontAwesomeIcon
                 icon={faComment}
                 onClick={() => handleAction("comment")}
@@ -79,10 +79,10 @@ export function Tweet({ tweet }) {
               />
               <span className="ml-2">{like}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-blue-400 gap-1">
+            <div className="flex items-center cursor-pointer hover:text-twitter-blue gap-1">
               <FontAwesomeIcon icon={faChartBar} />
             </div>
-            <div className="flex items-center cursor-pointer hover:text-blue-400 gap-1">
+            <div className="flex items-center cursor-pointer hover:text-twitter-blue gap-1">
               <FontAwesomeIcon icon={faUpload} />
             </div>
           </div>

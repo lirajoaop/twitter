@@ -4,6 +4,9 @@ import { Tweet } from "./components/Tweet";
 import { TwitterForm } from "./components/TwitterForm";
 import { getAvatar, getRandomImage } from "./utils/generateImages";
 import { v4 } from "uuid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { TrendItem } from "./components/TrendItem";
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -84,6 +87,54 @@ function App() {
             ))}
           </div>
         </main>
+        <aside className="hidden xl:block w-80 px-4">
+          <div className="sticky top-0 pt-2">
+            <div className="relative">
+              <FontAwesomeIcon
+                icon={faSearch}
+                className="absolute top-3 left-3 text-gray-500"
+              />
+              <input
+                placeholder="Search Twitter"
+                className="w-full bg-gray-800 text-white rounded-full outline-none py-2 pl-10 pr-4"
+              />
+            </div>
+            <div className="bg-gray-800 rounded-xl mt-4 p-4">
+              <h2 className="font-bold text-xl mb-4">Subscribe to Premium</h2>
+              <p className="text-gray-400 mb-4">
+                Subscribe to unlock new features and if eligible, receive a
+                share of ads revenue.
+              </p>
+              <button className="bg-twitter-blue font-bold py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200 ">
+                Subscribe
+              </button>
+            </div>
+            <div className="bg-gray-800 rounded-xl mt-4 p-4">
+              <h2 className="font-bold text-xl mb-4">What's happening</h2>
+              <TrendItem
+                category="eSports · Trending"
+                name="TitaN"
+                tweetCount="1342 tweets"
+              />
+              <TrendItem
+                category="eSports · Trending"
+                name="paiN Gaming"
+                tweetCount="2560 tweets"
+              />
+              <TrendItem
+                category="Music"
+                name="Kanye West"
+                tweetCount="3564 tweets"
+              />
+              <TrendItem
+                category="League of Legends"
+                name="Play-in Worlds 2024"
+                tweetCount="5249 tweets"
+              />
+              <TrendItem category="Music" name="333" tweetCount="3030 tweets" />
+            </div>
+          </div>
+        </aside>
       </div>
     </>
   );
