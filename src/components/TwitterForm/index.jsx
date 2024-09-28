@@ -50,7 +50,7 @@ export function TwitterForm({ onTweet }) {
       />
 
       <div className="flex justify-between items-center mt-4">
-        <span className="text-sm lg:text-sm">{tweetLength}/280</span>
+        <span className="text-base lg:text-sm">{tweetLength}/280</span>
         <div className="flex space-x-2 lg:space-x-4">
           <FontAwesomeIcon
             icon={faImage}
