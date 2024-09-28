@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { TrendItem } from "./components/TrendItem";
+import { FollowItem } from "./components/FollowItem";
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -72,7 +73,7 @@ function App() {
 
   return (
     <>
-      <div className="flex mx-auto max-w-7xl ">
+      <div className="flex mx-auto max-w-7xl">
         <Sidebar />
         <main className="flex-grow border-l border-r border-gray-700 max-w-xl">
           <header className="sticky top-0 z-10 bg-twitter-background bg-opacity-80 backdrop-blur-sm">
@@ -105,7 +106,7 @@ function App() {
                 Subscribe to unlock new features and if eligible, receive a
                 share of ads revenue.
               </p>
-              <button className="bg-twitter-blue font-bold py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200 ">
+              <button className="bg-twitter-blue font-bold py-2 px-4 rounded-full hover:bg-blue-600 transition duration-200">
                 Subscribe
               </button>
             </div>
@@ -128,10 +129,15 @@ function App() {
               />
               <TrendItem
                 category="League of Legends"
-                name="Play-in Worlds 2024"
+                name="Worlds 2024 Play-In"
                 tweetCount="5249 tweets"
               />
               <TrendItem category="Music" name="333" tweetCount="3030 tweets" />
+            </div>
+            <div className="bg-gray-800 rounded-xl mt-4 p-4">
+              <h2 className="font-bold text-xl mb-4">Who to follow</h2>
+              <FollowItem name="Matue" username="matue" />
+              <FollowItem name="TitaN" username="titanlol1" />
             </div>
           </div>
         </aside>
