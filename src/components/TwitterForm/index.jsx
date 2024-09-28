@@ -42,7 +42,7 @@ export function TwitterForm({ onTweet }) {
   return (
     <div className="border-b border-gray-800 p-4">
       <textarea
-        className="  w-full bg-transparent text-white text-xl resize-none outline-none"
+        className="w-full bg-transparent text-white text-xl resize-none outline-none"
         placeholder="What's happening?"
         ref={textAreaRef}
         onKeyDown={handleKeyDown}
@@ -50,8 +50,8 @@ export function TwitterForm({ onTweet }) {
       />
 
       <div className="flex justify-between items-center mt-4">
-        <span>{tweetLength}/280</span>
-        <div className="flex space-x-4">
+        <span className="text-sm lg:text-sm">{tweetLength}/280</span>
+        <div className="flex space-x-2 lg:space-x-4">
           <FontAwesomeIcon
             icon={faImage}
             className="text-twitter-blue cursor-pointer"
@@ -78,7 +78,7 @@ export function TwitterForm({ onTweet }) {
           />
         </div>
         <button
-          className="bg-twitter-blue text-white font-bold px-4 py-2 rounded-full hover:bg-blue-600 transition duration-200"
+          className="bg-twitter-blue text-white font-medium lg:font-bold px-2 lg:px-4 py-1 lg:py-2 rounded-full hover:bg-blue-600 transition duration-200"
           onClick={handleSubmit}
           disabled={tweetLength > 280}
         >
