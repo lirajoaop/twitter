@@ -49,7 +49,7 @@ export function Tweet({ tweet }) {
             </div>
             <FontAwesomeIcon icon={faEllipsisH} className="text-gray-500" />
           </div>
-          <p className="mt-2 break-all">{tweet.content}</p>
+          <p className="mt-2 break-words">{tweet.content}</p>
           {tweet.image && (
             <img
               src={tweet.image}
