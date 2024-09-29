@@ -14,7 +14,10 @@ export function Tweet({ tweet }) {
   const [likes, setLikes] = useState(tweet.likes || 0);
   const [retweets, setRetweets] = useState(tweet.retweets || 0);
 
-  function handleAction(action) {
+  function handleAction(action, event) {
+    if (event.detail === 2) {
+      return;
+    }
     switch (action) {
       case "like":
         setLikes((prevLikes) => prevLikes + 1);
@@ -63,24 +66,24 @@ export function Tweet({ tweet }) {
             />
           )}
           <div className="flex justify-between mt-4 text-gray-500 ">
-            <div className="flex items-center cursor-pointer hover:text-twitter-blue">
+            <div className="flex items-center cursor-pointer hover:text-twitter-blue select-none">
               <FontAwesomeIcon
                 icon={faComment}
-                onClick={() => handleAction("comment")}
+                onClick={(event) => handleAction("comment", event)}
               />
               <span className="ml-2">{comments}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-green-400">
+            <div className="flex items-center cursor-pointer hover:text-green-400 select-none">
               <FontAwesomeIcon
                 icon={faRetweet}
-                onClick={() => handleAction("retweet")}
+                onClick={(event) => handleAction("retweet", event)}
               />
               <span className="ml-2">{retweets}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-red-400 gap-1">
+            <div className="flex items-center cursor-pointer hover:text-red-400 gap-1 select-none">
               <FontAwesomeIcon
                 icon={faHeart}
-                onClick={() => handleAction("like")}
+                onClick={(event) => handleAction("like", event)}
               />
               <span className="ml-2">{likes}</span>
             </div>
