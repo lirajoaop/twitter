@@ -62,26 +62,26 @@ export function Tweet({ tweet }) {
               alt="user image content"
             />
           )}
-          <div className="flex justify-between mt-4 text-gray-500 ">
-            <div className="flex items-center cursor-pointer hover:text-twitter-blue select-none">
-              <FontAwesomeIcon
-                icon={faComment}
-                onClick={() => handleAction("comment")}
-              />
+          <div className="flex justify-between mt-4 text-gray-500  ">
+            <div
+              className="flex items-center cursor-pointer hover:text-twitter-blue select-none"
+              onClick={() => handleAction("comment")}
+            >
+              <FontAwesomeIcon icon={faComment} />
               <span className="ml-2">{comments}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-green-400 select-none">
-              <FontAwesomeIcon
-                icon={faRetweet}
-                onClick={() => handleAction("retweet")}
-              />
+            <div
+              className="flex items-center cursor-pointer hover:text-green-400 select-none"
+              onClick={() => handleAction("retweet")}
+            >
+              <FontAwesomeIcon icon={faRetweet} />
               <span className="ml-2">{retweets}</span>
             </div>
-            <div className="flex items-center cursor-pointer hover:text-red-400 gap-1 select-none">
-              <FontAwesomeIcon
-                icon={faHeart}
-                onClick={() => handleAction("like")}
-              />
+            <div
+              className="flex items-center cursor-pointer hover:text-red-400 gap-1 select-none"
+              onClick={() => handleAction("like")}
+            >
+              <FontAwesomeIcon icon={faHeart} />
               <span className="ml-2">{likes}</span>
             </div>
             <div className="flex items-center cursor-pointer hover:text-twitter-blue gap-1">
