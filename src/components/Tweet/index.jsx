@@ -7,27 +7,27 @@ import {
   faUpload,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export function Tweet({ tweet }) {
-  const [comments, setComments] = useState(0);
-  const [like, setLikes] = useState(0);
-  const [retweet, setRetweet] = useState(0);
+  const [comments, setComments] = useState(tweet.comments || 0);
+  const [likes, setLikes] = useState(tweet.likes || 0);
+  const [retweets, setRetweets] = useState(tweet.retweets || 0);
 
   function handleAction(action) {
     switch (action) {
       case "like":
-        setLikes((likes) => likes + 1);
+        setLikes((prevLikes) => prevLikes + 1);
         break;
 
       case "retweet":
-        setRetweet((retweet) => retweet + 1);
+        setRetweets((prevRetweets) => prevRetweets + 1);
 
         break;
 
+      case "comment":
+        setComments((prevComments) => prevComments + 1);
       default:
-        setComments((comments) => comments + 1);
-
         break;
     }
   }
@@ -75,14 +75,14 @@ export function Tweet({ tweet }) {
                 icon={faRetweet}
                 onClick={() => handleAction("retweet")}
               />
-              <span className="ml-2">{retweet}</span>
+              <span className="ml-2">{retweets}</span>
             </div>
             <div className="flex items-center cursor-pointer hover:text-red-400 gap-1">
               <FontAwesomeIcon
                 icon={faHeart}
                 onClick={() => handleAction("like")}
               />
-              <span className="ml-2">{like}</span>
+              <span className="ml-2">{likes}</span>
             </div>
             <div className="flex items-center cursor-pointer hover:text-twitter-blue gap-1">
               <FontAwesomeIcon icon={faChartBar} />
@@ -96,3 +96,5 @@ export function Tweet({ tweet }) {
     </div>
   );
 }
+
+export const MemoizedTweet = React.memo(Tweet);

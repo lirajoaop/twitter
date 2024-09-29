@@ -10,7 +10,7 @@ export function TrendItem({ category, name, tweetCount }) {
   );
 }
 
-TrendItem.PropTypes = {
+TrendItem.propTypes = {
   category: PropTypes.string,
   name: PropTypes.string,
   tweetCount: PropTypes.string,

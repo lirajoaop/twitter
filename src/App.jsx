@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       addNewRandomTweets();
-    }, 5000);
+    }, 20000);
     return () => clearInterval(interval);
   }, []);
 
@@ -49,11 +49,9 @@ function App() {
     addNewTweet(randomTweet, Math.random() > 0.7);
   };
 
-  const randomTweet = () => {};
-
   const addNewTweet = (content, includeImage = false) => {
     const newTweet = {
-      id: v4,
+      id: v4(),
       name: "User",
       username: `user${Math.floor(Math.random() * 1000)}`,
       avatar: getAvatar(`user${Math.floor(Math.random() * 1000)}@email.com`),
@@ -83,9 +81,10 @@ function App() {
             onTweet={(content) => addNewTweet(content, Math.random() > 0.6)}
           />
           <div>
-            {tweets.map((tweet) => (
-              <Tweet key={tweet.id} tweet={tweet} />
-            ))}
+            {tweets.map((tweet) => {
+              console.log(tweet);
+              return <Tweet key={tweet.id} tweet={tweet} />;
+            })}
           </div>
         </main>
         <aside className="hidden xl:block w-80 px-4">
