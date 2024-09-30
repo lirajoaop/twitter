@@ -82,7 +82,6 @@ function App() {
           />
           <div>
             {tweets.map((tweet) => {
-              console.log(tweet);
               return <Tweet key={tweet.id} tweet={tweet} />;
             })}
           </div>
