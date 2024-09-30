@@ -12,9 +12,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavItem = ({ icon, text }) => {
+const NavItem = ({ icon, text, onClick }) => {
   return (
-    <div className="flex items-center p-3 rounded-full cursor-pointer hover:bg-gray-600 transition duration-200">
+    <div
+      onClick={onClick}
+      className="flex items-center p-3 rounded-full cursor-pointer hover:bg-gray-600 transition duration-200"
+    >
       <FontAwesomeIcon icon={icon} className="w-6 h-6 mr-4" />
       <span className="text-xl hidden xl:inline">{text}</span>
     </div>
@@ -22,6 +25,13 @@ const NavItem = ({ icon, text }) => {
 };
 
 export function Sidebar() {
+  const handleHomeClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="w-20 xl:w-64 sticky top-0 px-2 h-screen ">
       <FontAwesomeIcon
@@ -29,7 +39,7 @@ export function Sidebar() {
         className="text-twitter-blue text-3xl mt-4 mb-4 mx-2 "
       />
       <nav>
-        <NavItem icon={faHome} text="Home" />
+        <NavItem icon={faHome} text="Home" onClick={handleHomeClick} />
         <NavItem icon={faHashtag} text="Explore" />
         <NavItem icon={faBell} text="Notifications" />
         <NavItem icon={faEnvelope} text="Messages" />
