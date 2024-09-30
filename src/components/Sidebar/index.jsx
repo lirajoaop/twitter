@@ -14,16 +14,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavItem = ({ icon, text, onClick }) => {
-  const handleInteraction = (e) => {
-    e.preventDefault();
-  };
   return (
     <div
       onClick={onClick}
-      onMouseDown={handleInteraction}
-      onTouchStart={handleInteraction}
-      className="flex items-center p-3 rounded-full cursor-pointer hover:bg-gray-600 transition duration-200 focus:outline-none focus-visible:outline-none no-tap-highlight"
-      tabIndex={0}
+      className="flex items-center p-3 rounded-full cursor-pointer xl:hover:bg-gray-600 transition duration-200 "
     >
       <FontAwesomeIcon icon={icon} className="w-6 h-6 mr-4" />
       <span className="text-xl hidden xl:inline">{text}</span>
