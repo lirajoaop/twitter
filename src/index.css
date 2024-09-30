@@ -5,3 +5,7 @@
 body {
   @apply bg-twitter-background text-white;
 }
+
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
