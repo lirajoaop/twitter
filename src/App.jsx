@@ -5,7 +5,11 @@ import { TwitterForm } from "./components/TwitterForm";
 import { getAvatar, getRandomImage } from "./utils/generateImages";
 import { v4 } from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faSearch, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faSearch,
+  faWandMagicSparkles,
+} from "@fortawesome/free-solid-svg-icons";
 import { TrendItem } from "./components/TrendItem";
 import { FollowItem } from "./components/FollowItem";
 
@@ -79,13 +83,23 @@ function App() {
             <h2 className="px-4 py-3 text-xl font-bold hidden xl:block">
               For You
             </h2>
+            {/* Desktop */}
+
             {/* Mobile */}
-            <div className="flex ">
+            <div className="flex justify-between items-center">
               <FontAwesomeIcon
                 icon={faBars}
-                className="px-4 py-3 text-2xl font-bold"
+                className="px-4 py-3 text-2xl font-bold inline xl:hidden"
+              />
+              <h2 className="inline xl:hidden text-center text-xl font-bold">
+                Home
+              </h2>
+              <FontAwesomeIcon
+                icon={faWandMagicSparkles}
+                className="px-4 py-3 text-2xl font-bold inline xl:hidden"
               />
             </div>
+            {/* Mobile */}
           </header>
           <TwitterForm
             onTweet={(content) => addNewTweet(content, Math.random() > 0.6)}
