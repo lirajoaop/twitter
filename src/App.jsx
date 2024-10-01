@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { TrendItem } from "./components/TrendItem";
 import { FollowItem } from "./components/FollowItem";
+import TweetFeatherButton from "./components/TweetFeatherButton";
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -163,6 +164,7 @@ function App() {
             </div>
           </div>
         </aside>
+        <TweetFeatherButton />
       </div>
     </>
   );
