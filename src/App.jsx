@@ -5,7 +5,7 @@ import { TwitterForm } from "./components/TwitterForm";
 import { getAvatar, getRandomImage } from "./utils/generateImages";
 import { v4 } from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import { TrendItem } from "./components/TrendItem";
 import { FollowItem } from "./components/FollowItem";
 
@@ -75,7 +75,17 @@ function App() {
         <Sidebar />
         <main className="flex-grow border-l border-r border-gray-700 max-w-xl">
           <header className="sticky top-0 z-10 bg-twitter-background bg-opacity-80 backdrop-blur-sm">
-            <h2 className="px-4 py-3 text-xl font-bold">For You</h2>
+            {/* Desktop */}
+            <h2 className="px-4 py-3 text-xl font-bold hidden xl:block">
+              For You
+            </h2>
+            {/* Mobile */}
+            <div className="flex ">
+              <img
+                src="src\assets\twitter-logo-r.jpg"
+                className="inline xl:hidden rounded-full w-9 h-9 m-3"
+              ></img>
+            </div>
           </header>
           <TwitterForm
             onTweet={(content) => addNewTweet(content, Math.random() > 0.6)}
