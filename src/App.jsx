@@ -159,8 +159,16 @@ function App() {
             </div>
             <div className="bg-gray-800 rounded-xl mt-4 p-4">
               <h2 className="font-bold text-xl mb-4">Who to follow</h2>
-              <FollowItem name="Matue" username="matue" />
-              <FollowItem name="TitaN" username="titanlol1" />
+              <FollowItem
+                name="Matue"
+                username="matue"
+                avatarUrl="src\assets\matue-profile.png"
+              />
+              <FollowItem
+                name="TitaN"
+                username="titanlol1"
+                avatarUrl="src\assets\titan-profile.png"
+              />
             </div>
           </div>
         </aside>

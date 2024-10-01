@@ -1,16 +1,11 @@
 import PropTypes from "prop-types";
-import { getAvatar } from "../../utils/generateImages";
 
-export function FollowItem({ name, username }) {
-  const avatar = getAvatar(
-    `${name + Math.floor(Math.random() * 1000)}@email.com`
-  );
-
+export function FollowItem({ name, username, avatarUrl }) {
   return (
     <div className="flex items-center justify-between py-3 hover:bg-gray-800 transition duration-200">
       <div className="flex items-center">
         <img
-          src={avatar}
+          src={avatarUrl}
           alt="user avatar"
           className="w-12 h-12 rounded-full mr-3"
         />
