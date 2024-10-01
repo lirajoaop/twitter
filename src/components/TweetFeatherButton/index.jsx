@@ -29,13 +29,13 @@ const TweetFeatherButton = () => {
     <>
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-12 mb-3 right-6 bg-twitter-blue text-white p-4 h-14 w-14 rounded-full shadow-lg transition-all duration-150 ease-in-out ${
+        className={`fixed bottom-12 mb-3 right-6 bg-twitter-blue text-white p-4 h-16 w-16 rounded-full shadow-lg transition-all duration-150 ease-in-out ${
           isVisible
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >
-        <FontAwesomeIcon icon={faFeatherAlt} className="text-2xl" />
+        <FontAwesomeIcon icon={faFeatherAlt} className="text-3xl" />
       </button>
     </>
   );
