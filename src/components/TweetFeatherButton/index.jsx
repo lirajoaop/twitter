@@ -35,7 +35,7 @@ const TweetFeatherButton = () => {
             : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >
-        <FontAwesomeIcon icon={faFeatherAlt} className="text-xl" />
+        <FontAwesomeIcon icon={faFeatherAlt} className="text-2xl" />
       </button>
     </>
   );
