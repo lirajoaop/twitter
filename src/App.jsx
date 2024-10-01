@@ -81,10 +81,10 @@ function App() {
             </h2>
             {/* Mobile */}
             <div className="flex ">
-              <img
-                src="src\assets\twitter-logo-r.jpg"
-                className="inline xl:hidden rounded-full w-9 h-9 m-3"
-              ></img>
+              <FontAwesomeIcon
+                icon={faBars}
+                className="px-4 py-3 text-2xl font-bold"
+              />
             </div>
           </header>
           <TwitterForm
