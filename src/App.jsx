@@ -106,7 +106,7 @@ function App() {
               </h2>
               <FontAwesomeIcon
                 icon={faWandMagicSparkles}
-                className="px-4 py-3 text-2xl font-bold inline xl:hidden"
+                className="text-2xl font-bold inline xl:hidden"
               />
             </div>
             {/* Mobile */}
