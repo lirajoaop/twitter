@@ -13,9 +13,11 @@ import {
 import { TrendItem } from "./components/TrendItem";
 import { FollowItem } from "./components/FollowItem";
 import TweetFeatherButton from "./components/TweetFeatherButton";
+import { MobileMenu } from "./components/MobileMenu";
 
 function App() {
   const [tweets, setTweets] = useState([]);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -79,6 +81,10 @@ function App() {
       <div className="flex mx-auto max-w-7xl">
         <Sidebar />
         <main className="flex-grow border-l border-r border-gray-700 max-w-xl">
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            setIsOpen={setIsMobileMenuOpen}
+          />
           <header className="sticky top-0 z-10 bg-twitter-background bg-opacity-80 backdrop-blur-sm">
             {/* Desktop */}
             <h2 className="px-4 py-3 text-xl font-bold hidden xl:block">
@@ -87,11 +93,14 @@ function App() {
             {/* Desktop */}
 
             {/* Mobile */}
-            <div className="flex justify-between items-center">
-              <FontAwesomeIcon
-                icon={faBars}
-                className="px-4 py-3 text-2xl font-bold inline xl:hidden"
-              />
+            <div className="flex justify-between items-center p-4">
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="xl:hidden"
+              >
+                <FontAwesomeIcon icon={faBars} size="2x" />
+              </button>
+
               <h2 className="inline xl:hidden text-center text-xl font-bold">
                 Home
               </h2>

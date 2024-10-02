@@ -11,14 +11,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavItem = ({ icon, text, onClick }) => {
+export const NavItem = ({ icon, text, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="flex items-center p-3 rounded-full cursor-pointer xl:hover:bg-gray-600 transition duration-200 "
+      className="flex items-center p-3 rounded-full cursor-pointer xl:hover:bg-gray-600 transition duration-200"
     >
       <FontAwesomeIcon icon={icon} className="w-6 h-6 mr-4" />
-      <span className="text-xl hidden xl:inline">{text}</span>
+      <span className="text-xl inline">{text}</span>
     </div>
   );
 };
