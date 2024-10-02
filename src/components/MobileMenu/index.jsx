@@ -17,7 +17,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
       {/* Botão para fechar o menu */}
       <button onClick={() => setIsOpen(false)} className="mb-4 text-white">
         <img
-          src="public\images\Default-Profile-Picture.png"
+          src="/images/Default-Profile-Picture.png"
           alt="user profile picture"
           className="w-12 h-12 rounded-full mr-3"
         />
