@@ -171,12 +171,12 @@ function App() {
               <FollowItem
                 name="Matue"
                 username="matue"
-                avatarUrl="src\assets\matue-profile.png"
+                avatarUrl="public\images\matue-profile.png"
               />
               <FollowItem
                 name="TitaN"
                 username="titanlol1"
-                avatarUrl="src\assets\titan-profile.png"
+                avatarUrl="public\images\titan-profile.png"
               />
             </div>
           </div>
