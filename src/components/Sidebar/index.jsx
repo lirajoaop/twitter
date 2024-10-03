@@ -34,7 +34,7 @@ export function Sidebar() {
   return (
     <>
       {/*  Horizontal Navbar for Mobile */}
-      <div className="w-full fixed bottom-0 bg-black border-t border-gray-600 xl:hidden flex justify-around ">
+      <div className="w-full fixed bottom-0 bg-black border-t border-gray-600 xl:hidden flex justify-around py-1 ">
         <NavItem icon={faHome} onClick={handleHomeClick} />
         <NavItem icon={faSearch} />
         <NavItem icon={faBell} />

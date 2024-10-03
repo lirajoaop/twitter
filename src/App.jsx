@@ -97,7 +97,7 @@ function App() {
             {/* Desktop */}
 
             {/* Mobile */}
-            <div className="flex justify-between items-center p-4">
+            <div className="flex justify-between items-center p-4 py-5">
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="xl:hidden"
