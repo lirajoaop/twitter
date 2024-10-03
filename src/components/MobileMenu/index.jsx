@@ -49,6 +49,10 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
         <NavItem icon={faBookmark} text="Bookmarks" />
         <NavItem icon={faBolt} text="Moments" />
       </div>
+      <div className="mt-4 ml-3 space-y-6 text-xl">
+        <p>Settings and privacy</p>
+        <p>Help Center</p>
+      </div>
     </div>
   );
 };
