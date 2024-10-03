@@ -98,7 +98,7 @@ function App() {
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="xl:hidden"
               >
-                <FontAwesomeIcon icon={faBars} size="2x" />
+                <FontAwesomeIcon icon={faBars} size="xl" />
               </button>
 
               <h2 className="inline xl:hidden text-center text-xl font-bold">
@@ -106,7 +106,7 @@ function App() {
               </h2>
               <FontAwesomeIcon
                 icon={faWandMagicSparkles}
-                className="text-2xl font-bold inline xl:hidden"
+                className="text-xl font-bold inline xl:hidden"
               />
             </div>
             {/* Mobile */}
