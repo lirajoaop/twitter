@@ -1,13 +1,7 @@
 import {
-  faBell,
   faBolt,
   faBookmark,
-  faEnvelope,
-  faHashtag,
-  faHome,
-  faList,
   faListAlt,
-  faSearch,
   faStream,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +11,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-y-0 left-0 w-4/5 bg-black z-50 flex flex-col items-start p-4">
+    <div className="fixed inset-y-0 left-0 w-4/5 bg-black z-50 flex flex-col items-start p-4 xl:hidden ">
       {/* Close menu button */}
       <button onClick={() => setIsOpen(false)} className="text-white">
         <img
@@ -26,6 +20,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
           className="w-20 h-20 rounded-full mr-3"
         />
       </button>
+      {/* Close menu button */}
       <div className="ml-3">
         <h2 className="text-xl font-bold">User</h2>
         <p className="text-slate-400">@user</p>
@@ -41,6 +36,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       </div>
+      {/* Follow div */}
       <div className="flex flex-col space-y-2 border-b border-b-slate-200 w-full pb-4">
         {/* Menu items */}
         <NavItem icon={faUser} text="Profile" />
@@ -49,6 +45,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
         <NavItem icon={faBookmark} text="Bookmarks" />
         <NavItem icon={faBolt} text="Moments" />
       </div>
+      {/* Menu items */}
       <div className="mt-4 ml-3 space-y-6 text-xl">
         <p>Settings and privacy</p>
         <p>Help Center</p>
