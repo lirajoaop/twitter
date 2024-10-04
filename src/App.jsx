@@ -56,12 +56,20 @@ function App() {
     addNewTweet(randomTweet, Math.random() > 0.7);
   };
 
-  const addNewTweet = (content, includeImage = false) => {
+  const addNewTweet = (
+    content,
+    includeImage = false,
+    user = null,
+    username = null,
+    avatar = null
+  ) => {
     const newTweet = {
       id: v4(),
-      name: "User",
-      username: `user${Math.floor(Math.random() * 1000)}`,
-      avatar: getAvatar(`user${Math.floor(Math.random() * 1000)}@email.com`),
+      name: user || "User",
+      username: username || `user${Math.floor(Math.random() * 1000)}`,
+      avatar:
+        avatar ||
+        getAvatar(`user${Math.floor(Math.random() * 1000)}@email.com`),
       content,
       time: new Date().toLocaleString([], {
         hour: "2-digit",
@@ -116,7 +124,15 @@ function App() {
             {/* Mobile */}
           </header>
           <TwitterForm
-            onTweet={(content) => addNewTweet(content, Math.random() > 0.6)}
+            onTweet={(content) =>
+              addNewTweet(
+                content,
+                Math.random() > 0.6,
+                "Miles",
+                "miles_morales",
+                "/images/miles-profile.png"
+              )
+            }
           />
           <div>
             {tweets.map((tweet) => {
