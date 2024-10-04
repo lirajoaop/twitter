@@ -60,9 +60,7 @@ export function Sidebar() {
         </nav>
 
         <button className="bg-twitter-blue text-white rounded-full font-bold px-4 py-3 mt-4 w-full cursor-pointer hover:bg-blue-600 transition duration-200">
-          <span className="hidden xl:inline hover:bg-twitter-blue">
-            Twitter
-          </span>
+          <span className="hidden xl:inline">Twitter</span>
         </button>
       </div>
     </>
