@@ -22,8 +22,8 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
       </button>
       {/* Close menu button */}
       <div className="ml-3">
-        <h2 className="text-xl font-bold">User</h2>
-        <p className="text-slate-400">@user</p>
+        <h2 className="text-xl font-bold">Miles</h2>
+        <p className="text-slate-400">@miles_morales</p>
         {/* Follow div */}
         <div className="flex space-x-3 mb-4 ">
           <div className="flex space-x-1 mt-3">

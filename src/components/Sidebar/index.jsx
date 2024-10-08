@@ -10,6 +10,7 @@ import {
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FollowItem } from "../FollowItem";
 
 export const NavItem = ({ icon, text, onClick }) => {
   return (
@@ -62,6 +63,23 @@ export function Sidebar() {
         <button className="bg-twitter-blue text-white rounded-full font-bold px-4 py-3 mt-4 w-full cursor-pointer hover:bg-blue-600 transition duration-200">
           <span className="hidden xl:inline">Twitter</span>
         </button>
+        {/* User Info */}
+        <div className="flex items-center justify-between py-7">
+          <div className="flex items-center">
+            <img
+              src="/images/miles-profile.png"
+              alt="user avatar"
+              className="w-12 h-12 rounded-full mr-3"
+            />
+            <div>
+              <p className="font-bold">Miles</p>
+              <p className="text-gray-500">miles_morales</p>
+            </div>
+            <span className="flex mx-7 cursor-pointer">
+              <FontAwesomeIcon icon={faEllipsisH} />
+            </span>
+          </div>
+        </div>
       </div>
     </>
   );

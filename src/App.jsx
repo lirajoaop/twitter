@@ -190,12 +190,12 @@ function App() {
               <h2 className="font-bold text-xl mb-4">Who to follow</h2>
               <FollowItem
                 name="Matue"
-                username="matue"
+                username="@matue"
                 avatarUrl="/images/matue-profile.png"
               />
               <FollowItem
                 name="TitaN"
-                username="titanlol1"
+                username="@titanlol1"
                 avatarUrl="/images/titan-profile.png"
               />
             </div>
