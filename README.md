@@ -56,12 +56,12 @@ This will run the app in development mode. Open [http://localhost:3000](http://l
 
 **Desktop View**
 
+
 <img width="1901" height="1007" alt="image" src="https://github.com/user-attachments/assets/547546b7-5fb1-44f2-a03c-61ac7a521de6" />
 
 
 **Mobile View**
 
+
 <img width="416" height="888" alt="image" src="https://github.com/user-attachments/assets/63fbd8bb-f8d3-4170-9aab-7739d271b0f8" />
 
-
-[Image of mobile app]
